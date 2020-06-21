@@ -1,0 +1,57 @@
+<div class="container-fluid">
+<h5>Diretiva *ngFor</h5>
+<br>
+
+    <ul style="color: green;">
+        <li *ngFor="let curso of cursos, let i = index">
+        <span style="color: red;"> {{ i + 1 }} </span> 
+        -
+        <span style="color: blue;"> {{ curso }} </span>    
+        </li>
+    </ul>
+    <br>
+
+    <ul style="color: green;">
+        <li *ngFor="let curso1 of outrosCursos, let t = index">
+        <span style="color: red;"> {{ t + 1 }} </span> 
+        -
+        <span style="color: blue;"> {{ curso1 }} </span>    
+        </li>
+    </ul>
+    <br>
+
+    
+    
+<h5>Removendo o * e usando o Template...</h5>
+
+<br>
+<!-- <ul style="color: green;">
+    <li template= "ngFor let curso2 of outrosCursos2, let z = index">
+    <span style="color: red;"> {{ z + 1 }} </span> 
+    -
+    <span style="color: blue;"> {{ curso2 }} </span>    
+    </li>
+</ul> -->
+
+<ul style="color: green;">
+    <li *ngFor="let curso2 of outrosCursos2, let z = index">
+    <span style="color: red;"> {{ z + 1 }} </span> 
+    -
+    <span style="color: blue;"> {{ curso2 }} </span>    
+    </li>
+</ul>
+
+<!-- <ul>
+<template ngFor [ngForOf]="cursos" let-curso let-i ="index">
+    <li>
+        {{ 1 + 1 }} - {{ curso }}
+    </li>
+</template>
+</ul> -->
+
+<br>
+
+    
+
+</div>
+

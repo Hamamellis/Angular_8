@@ -1,0 +1,77 @@
+<br>
+<div class="container-fluid">
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <div class="nav navbar-nav">    
+        <a class="nav-item nav-link"
+          [class.active]="aba == 'home'"
+          (click)="aba = 'home'">
+          Home
+        </a>  
+
+        <a class="nav-item nav-link"
+          [class.active]="aba == 'mapa'"
+          (click)="aba = 'mapa'">
+          Mapa
+        </a>
+
+        <a class="nav-item nav-link"
+          [class.active]="aba == 'lista'"
+          (click)="aba = 'lista'">
+          Lista
+        </a>
+
+        <a class="nav-item nav-link"
+          [class.active]="aba == 'detalhes'"
+          (click)="aba = 'detalhes'">
+          Detalhes
+        </a>    
+    </div>  
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'mapa'">Template <span style="color: crimson;"> Mapa </span> ativado</p>
+  <p *ngSwitchCase="'lista'">Template <span style="color: green;"> Lista </span> ativado</p>
+  <p *ngSwitchCase="'detalhes'">Template <span style="color: blue;"> Detalhes </span> ativado</p>
+  <p *ngSwitchDefault>Template <span style="color: darkorange;"> Home </span> ativado</p> 
+</div>
+
+</div>
+
+
+<!-- Grey with black text -->
+
+<!--
+
+<br>
+<nav class="navbar navbar-expand-sm bg-primary navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+
+<br>
+-->
+
+<!-- Black with white text
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">BackEnd Bootstrap</nav>
+<br>
+ Blue with white text 
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">FrontEnd Bootstrap</nav>
+<br>
+-->
+<!-- Yellow with white text 
+<nav class="navbar navbar-expand-sm bg-warning navbar-dark">Programação</nav> 
+<br>
+-->

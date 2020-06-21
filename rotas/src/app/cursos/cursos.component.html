@@ -1,0 +1,31 @@
+
+<div class="container-fluid">
+        <div style="text-align: left">
+            <h5> Lista de Cursos: </h5>
+        </div> 
+        <div style="text-align: right">
+            <h5>Página: {{ pagina }} </h5>
+        </div>
+        
+           
+        <div style="text-align: right">
+            <button type= "button" class="btn btn-info" (click)="proximaPagina()">
+                Próxima Pagina
+            </button>
+        </div>
+
+        <div class="collection">
+            <a class="collection-item"
+                *ngFor="let curso of cursos" 
+                [routerLink]="['/curso', curso.id]">                
+            Curso: 
+                <span style="color: green; font-weight: normal; font-size: 17px;">
+            {{ curso.nome }}
+                </span>                     
+            </a>
+        </div>
+
+        
+</div>
+<br><br>
+

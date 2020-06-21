@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <h2> Curso Angular usando <strong> Serviços </strong> com @Injectable():</h2>
+    <br>
+    
+    <h4 [ngStyle]="{'color': 'green'}"> Lista de Cursos: </h4>
+    
+    <ul style="color: green;">
+        <li *ngFor="let curso of cursos, let i = index">
+        <span style="color: red;"> {{ i + 1 }} </span> 
+        -
+        <span style="color: blue;"> {{ curso }}</span> 
+        </li>
+    </ul>
+
+    <hr style="border-style: solid; border-color: blue;">
+
+    <h2> Compartilhando <strong> Serviços </strong> entre componentes:</h2>
+    <br>
+    
+    <h4 [ngStyle]="{'color': 'green'}"> Lista de Cursos: </h4>
+    
+    <input type="text" #cursoInput>
+    &nbsp;
+    <button class="btn btn-primary" (click)="onAddCurso(cursoInput.value)">
+        Adicione um novo Curso 
+    </button>
+
+    <ul style="color: green;">
+        <li *ngFor="let curso of cursos, let i = index">
+        <span style="color: red;"> {{ i + 1 }} </span> 
+        -
+        <span style="color: blue;"> {{ curso }}</span> 
+        </li>
+    </ul>
+
+    <receber-curso-criado></receber-curso-criado>
+
+    </div>

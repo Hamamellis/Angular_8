@@ -1,0 +1,52 @@
+
+<div class="container-fluid">
+    <br>
+<p fundoAmarelo>
+    Texto com Fundo Amarelo...
+</p>
+
+<button fundoAzul> Botão com Fundo Amarelo...</button>
+
+<br><br>
+
+    <p highlightMouse>
+        Texto com 
+        <span style="color: blue; font-Weight: bold">
+            Highlight
+        </span> quando passo o mouse.
+    </p>
+
+<br>
+
+
+    <p [highlight]="'red'" [defaultBgColor]= "'grey'">
+                Texto com 
+            <span style="color: black; font-Weight: bold">
+                Highlight
+            </span> com cores Customizadas...
+    </p>
+
+
+    <h5>Diretiva Estrutura customizada - ngElse</h5>
+
+<div *ngIf="mostrarCursos" >
+  Lista de cursos aqui.
+</div>
+<div *ngElse="mostrarCursos" >
+  Não existem cursos para serem listados.
+</div>
+
+<br>
+<button (click)="onMostrarCursos()">
+  Mostrar ou esconder cursos
+</button>
+<br>
+
+<!-- Para Angular v4+, usar <ng-template></ng-template> no lugar de <template></template> -->
+<!-- <ng-template [ngElse]="mostrarCursos">
+  <div>
+    Não existem cursos para serem listados.
+  </div>
+</ng-template>
+
+</div> -->

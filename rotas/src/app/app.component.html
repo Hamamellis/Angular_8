@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  
+    <h4>
+    Learning to create Routes {{ title }}
+    </h4>
+  
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a routerLink="" class="brand-logo right"> 
+        Rotas: <span [ngStyle]="{'color': 'blue', 'fontWeight': 'bold'}"> Angular 8 </span>
+      </a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li routerLinkActive="active"><a routerLink="/login" [queryParams]="{pagina:1}"> Login </a></li>
+        <li routerLinkActive="active"><a routerLink="/cursos" [queryParams]="{pagina:1}"> Cursos </a></li>
+        <li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]"> Curso com ID </a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+  &nbsp;
+<div class="container">
+  <h5> Entre com o ID do Curso desejado: </h5>
+  &nbsp;
+  <input #idCurso>
+  <router-outlet></router-outlet>
+</div>
+    
+</div>

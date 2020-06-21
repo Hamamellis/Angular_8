@@ -1,0 +1,36 @@
+<div class=container>
+
+    <div class="container-fluid">
+        <div style="text-align: right">
+            <button type="button" class="btn btn-primary" (click)="voltarCursos()">
+                <i glyphicon > Voltar para Cursos </i>
+            </button>
+        </div>
+        
+        <h5>
+            O Código do Curso é: &nbsp; 
+                <span style="color: blue; font-size: 25px;">
+                    {{ id }} 
+                </span>
+        </h5>    
+            <br>    
+        <h5> O Curso é: &nbsp;
+            <span style="color: red; font-size: 25px;">
+            {{ curso?.nome }} 
+            </span> 
+        </h5>
+            <br>
+        <h5> O valor do curso é: &nbsp;
+                <span style="color: blue; font-weight: normal; font-size: 25px;">
+            {{ curso.valor }}
+                </span>    
+        </h5>
+        <br>
+        <h5> O tempo do Curso é: &nbsp;
+            <span style="color: blue; font-weight: normal; font-size: 25px;">
+        {{ curso.tempo }}
+            </span>    
+        </h5>
+    </div>
+</div>
+    

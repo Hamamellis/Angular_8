@@ -1,0 +1,19 @@
+<p>operador-elvis works!</p>
+
+
+<h5>
+    Descrição: {{ tarefa.desc }}
+</h5>
+<h5>
+    <!--Responsável: {{ tarefa.responsavel.nome }}-->
+    <!--Responsável: {{ tarefa.responsavel != null ? tarefa.responsavel.nome : '' }}-->
+</h5>
+<br>
+<h5>
+    Responsável: {{ tarefa.responsavel?.usuario?.nome }}    
+</h5>
+<br>
+<p> Operador Elves: Se o Objeto tarefa tiver... <br> 
+    Objeto responsavel como Nulo, responda Vazio, <br> 
+    senão, mostra o Objeto que tiver
+</p>

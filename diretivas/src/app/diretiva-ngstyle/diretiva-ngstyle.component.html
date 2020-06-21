@@ -1,0 +1,49 @@
+
+<h5>Styles com property binding (Style Binding)</h5>
+<br>
+<button class="btn"
+[style.backgroundColor]="ativo ? 'green' : 'blue'"
+[style.color]="ativo ? 'white' : 'white'"
+[style.fontWeight]="ativo ? 'bold' : 'normal'"
+[style.fontSize]="tamanhoFonte + 'px'"
+(click)="mudarAtivo()"
+>
+Mudar a propriedade Atributo
+    <span 
+    [style.color]="ativo ? 'blue' : 'Yellow'"
+    [style.fontWeight]="ativo ? 'bold' : 'normal'"
+    >
+Ativo
+    </span> 
+do Botão    
+</button>
+
+<br><br>
+<input type="text" [(ngModel)]="tamanhoFonte">
+
+<br><br>
+
+<h5>Styles com diretiva ngStyle</h5>
+
+    <button class="btn"
+        [ngStyle]="{
+            'backgroundColor': (inativo ? 'red' : 'green'),
+            'color': (inativo ? 'white' : 'white'),
+            'fontWeight': (inativo ? 'bold' : 'normal'),
+            'fontSize': (tamanhoFonte1 + 'px'),
+            'fontFamily': (inativo ? 'lucida console' : 'helvetica')
+        }"
+    (click)="mudarInativo()"
+    >
+    Este Botão muda as propriedade de 
+        <span 
+            [ngStyle]="{'color': inativo ? 'yellow' : 'blue',
+                        'fontWeight': inativo ? 'bold' : 'bold'
+                    }">
+                <span *ngIf="inativo == true"> DESATIVADO </span>            
+                <span *ngIf="inativo == false"> ATIVADO </span>            
+        </span> ao ser Selecionado!
+    </button>
+    <br>
+    <br><br>
+    <input type="text" [(ngModel)]="tamanhoFonte1">
