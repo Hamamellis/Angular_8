@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <h5>
+        Detalhes do Aluno:
+    </h5>
+        <p> ID:
+            <span [ngStyle]="{'color': 'blue', 'fontWeight': 'bold', 'fontSize': '20px'}"> 
+                {{ aluno.id}} 
+            </span>  
+        </p>
+        <p> Nome: 
+            <span [ngStyle]="{'color': 'green', 'fontWeight': 'bold'}"> 
+                {{ aluno.nome}} 
+            </span> 
+        </p>
+        <p> E-mail: 
+            <span [ngStyle]="{'color': 'red', 'fontWeight': 'bold', 'textTransform': 'uppercase'}"> 
+                {{ aluno.email}} 
+            </span> 
+        </p>
+        <p> E-mail: 
+            <span [ngStyle]="{'color': 'orange', 'fontWeight': 'bold', 'textTransform': 'uppercase'}"> 
+                {{ aluno.celular}} 
+            </span> 
+        </p>
+
+        <a class="waves-effect waves-light btn" (click)="editarContato()"> Editar </a>
+</div>

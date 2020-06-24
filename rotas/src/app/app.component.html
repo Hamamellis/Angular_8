@@ -1,7 +1,7 @@
 <div class="container-fluid">
   
     <h4>
-    Learning to create Routes {{ title }}
+    Learning to create with {{ title }}
     </h4>
   
 <header>
@@ -11,9 +11,10 @@
         Rotas: <span [ngStyle]="{'color': 'blue', 'fontWeight': 'bold'}"> Angular 8 </span>
       </a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li routerLinkActive="active"><a routerLink="/login" [queryParams]="{pagina:1}"> Login </a></li>
+        <li routerLinkActive="active"><a routerLink="/login"> Login </a></li>
         <li routerLinkActive="active"><a routerLink="/cursos" [queryParams]="{pagina:1}"> Cursos </a></li>
-        <li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]"> Curso com ID </a></li>
+        <!--li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]"> Curso com ID </a></li-->
+        <li routerLinkActive="active"><a routerLink="/alunos"> Alunos </a></li>
       </ul>
     </div>
   </nav>
@@ -21,9 +22,9 @@
 
   &nbsp;
 <div class="container">
-  <h5> Entre com o ID do Curso desejado: </h5>
+  <!--h5> Entre com o ID do Curso desejado: </h5>
   &nbsp;
-  <input #idCurso>
+  <input #idCurso-->
   <router-outlet></router-outlet>
 </div>
     
