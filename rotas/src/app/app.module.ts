@@ -9,6 +9,7 @@ import { CursosModule } from './cursos/cursos.module';
 import { AlunosModule } from './alunos/alunos.module';
 import { AuthService } from './login/auth.service';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './guards/auth.guard';
 //import { CursosService } from './cursos/cursos.service';
 //import { CursosComponent } from './cursos/cursos.component';
 //import { routing } from './app.routing';
@@ -33,7 +34,10 @@ import { FormsModule } from '@angular/forms';
     FormsModule
     //routing
   ],
-  providers: [AuthService],
+  exports: [
+    
+  ],
+  providers: [AuthService, AuthGuard],
   //providers: [CursosService],
   bootstrap: [AppComponent]
 })

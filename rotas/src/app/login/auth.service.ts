@@ -21,9 +21,13 @@ export class AuthService {
       this.mostrarMenuEmitter.emit(true);
       this.router.navigate(['/']);
     }
-    else{
+    else {
       this.usuarioAutenticado = false;
       this.mostrarMenuEmitter.emit(false);
     }
   }
+  usuarioEstaAutenticado(){
+    return this.usuarioAutenticado;
+  }
+
 }
