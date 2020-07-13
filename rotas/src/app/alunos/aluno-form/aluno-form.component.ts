@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AlunosService } from '../alunos.service';
 import { ActivatedRoute } from '@angular/router';
+//import { IFormCanDeactivate } from 'src/app/guards/iform-candeactivate';
 
 @Component({
   selector: 'app-aluno-form',
@@ -42,5 +43,16 @@ export class AlunoFormComponent implements OnInit {
     this.formMudou = true;
     console.log('mudou');
   }
+
+  podeMudarRota(){
+     if(this.formMudou){
+        confirm('Tem Certeza que deseja sair desta página...???');
+     }
+     return true;
+  }
+  
+  // podeDesativar(){
+  //   return this.podeMudarRota();
+  // }
 
 }
