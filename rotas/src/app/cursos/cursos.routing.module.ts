@@ -13,6 +13,7 @@ const cursosRoutes: Routes = [
     { path: 'cursos', component: CursosComponent,
         canActivate: [AuthGuard],   
         canActivateChild: [CursosGuard],
+        canLoad: [AuthGuard]
     },
     { path: 'curso/:id', component: CursoDetalheComponent,
         canActivate: [AuthGuard],

@@ -12,6 +12,7 @@ const alunosRoutes = [
     {path: 'alunos', component: AlunosComponent, 
         canActivate: [AuthGuard],
         canActivateChild: [AlunosGuard],    
+        canLoad: [AuthGuard],
             children :[
                 {path: 'novo', component: AlunoFormComponent},
                 {path: ':id', component: AlunoDetalheComponent,
