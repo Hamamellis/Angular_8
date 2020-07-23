@@ -1,0 +1,30 @@
+
+<div class="container-fluid">
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="email" class="form-control" name="nome"
+                id="nome" placeholder="Informe o seu Nome" [ngModel]="usuario.nome"
+                required >   
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" name="email"
+                id="email" placeholder="Informe o E-mail" [ngModel]="usuario.email"
+                required email > 
+                <!--pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"-->                 
+            </div>
+
+            <div class="form-group">
+                <label for="senha">E-mail:</label>
+                <input type="password" class="form-control" name="senha"
+                id="senha" placeholder="Forneça a sua Senha" [ngModel]="usuario.senha"
+                required >   
+            </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>     
+</div>
+
