@@ -22,7 +22,19 @@ export class TemplateFormComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {   
+  }
+
+  verificaValidTouched(campo){
+    return !campo.valid && campo.touched;
+  }
+
+  aplicaCssErro(campo){
+    return {
+      'has-error': this.verificaValidTouched(campo),
+      'has-feedback': this.verificaValidTouched(campo)
+    }
+
   }
 
 }
