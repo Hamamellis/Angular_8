@@ -34,7 +34,26 @@ export class TemplateFormComponent implements OnInit {
       'has-error': this.verificaValidTouched(campo),
       'has-feedback': this.verificaValidTouched(campo)
     }
-
   }
+
+  // consultaCEP(cep){
+  //   console.log(cep); // Para vermos se está ok, executamos um Console.log(cep)
+
+  //   //Nova variável "cep" somente com dígitos. // Abaixo como já temos o cep... vamos usá-lo ao invéz
+  //   //var cep = $(this).val().replace(/\D/g, '');
+  //   cep = cep.replace(/\D/g, '');
+
+  //   //Vamos agora, Verifica se campo cep possui valor informado.
+  //   if (cep != "") {
+  //       //Expressão regular para validar o CEP. Que deve ter 8 dígitos...
+  //       var validacep = /^[0-9]{8}$/;
+
+  //       //Se a função ValidaCep estiver "OK".
+  //       if(validacep.test(cep)) {
+
+  //         //this.http.get(`//viacep.com.br/ws/ ${cep} /json`);
+  //       }
+  //   }
+  // }
 
 }
