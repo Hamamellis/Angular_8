@@ -1,1 +1,39 @@
 <p>data-form works!</p>
+
+
+<div class="container">
+
+    <form class="form-horizontal" [formGroup]="formulario">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <label for="nome" class="control-label"> Nome: </label>
+            </div>
+
+            <div class="col-sm-12">                
+                <input type="text" class="form-control" formControlName="nome"
+                    id="nome" placeholder="Informe o seu Nome">                    
+        <!-- Na variável Local '#nome' - Damos visibilidade com ngModel -->           
+            </div>
+        </div>  
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <label for="email" class="control-label"> E-mail: </label>
+            </div>
+                
+            <div class="col-sm-12"> 
+                <input type="email" class="form-control" formControlName="email"
+                    id="email" placeholder="Informe o E-mail"> 
+
+            </div>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary"> Enviar </button>
+
+    <!-- Para não aparecer no Template o Formulário de Debug... excluir ou comentar a linha abaixo: -->
+        <app-form-debug [form]="formulario"></app-form-debug> 
+        <!-- Visibilidade e acessando com Property 'f' -->
+    </form>     
+</div>

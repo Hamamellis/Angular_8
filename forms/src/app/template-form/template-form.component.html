@@ -47,8 +47,8 @@
 
                 <label for="cep" class="control-label">CEP:</label>
                 <input type="text" class="form-control" id="cep"
-                name="cep" ngModel required #cep="ngModel">
-<!--(blur)="consultaCEP($event.target.value)" -- Vamos Criar uma Função no EventBinding do Blur -->
+                name="cep" ngModel required #cep="ngModel"
+                (blur)="consultaCEP($event.target.value, f)"> <!-- Vamos Criar uma Função no EventBinding do Blur -->
 
                 <app-campo-control-erro 
                     [mostrarErro]= "verificaValidTouched(cep)" 
@@ -85,8 +85,8 @@
                 
             <div class="col-sm-12">                
                 <input type="text" class="form-control" name="rua"
-                    id="rua" placeholder="Informe o nome da sua rua" [ngModel]="usuario.rua"
-                    required #rua="ngModel"> 
+                    id="rua" placeholder="Informe o nome da sua rua" 
+                    ngModel required #rua="ngModel"> 
                     <!-- Na variável Local '#rua' - Damos visibilidade com ngModel -->
                 
                 <app-campo-control-erro 
