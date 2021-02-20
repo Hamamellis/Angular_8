@@ -22,7 +22,7 @@
     "@types/lodash": "^4.14.155",
     "angular2-materialize": "^15.1.10",
     "bootstrap": "^4.5.0",
-    "jquery": "^2.2.4",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "materialize-css": "^1.0.0",
     "ngx-bootstrap": "^5.6.1",
